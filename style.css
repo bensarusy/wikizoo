@@ -1,0 +1,141 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #333;
+    padding-top: 70px;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #4caf50, #2196f3, #ff9800);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 { font-size: 1.5rem; }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover { color: #ffe082; }
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main grid */
+main {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card style */
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Tags */
+.tags {
+    margin-bottom: 1rem;
+}
+
+.tags span {
+    display: inline-block;
+    background: #eee;
+    color: #444;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 0.4rem;
+}
+
+/* Facts list */
+.facts {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    list-style: square;
+    color: #555;
+}
+
+/* Color accents */
+.lion { border-top: 6px solid #f44336; }
+.elephant { border-top: 6px solid #9c27b0; }
+.penguin { border-top: 6px solid #03a9f4; }
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 0 0 0 12px;
+    }
+
+    nav ul.active { display: flex; }
+
+    .menu-toggle { display: block; }
+}
